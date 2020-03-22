@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pandemic Radio</title>
+    <meta name="description" content="Pandemic" Radio />
+    <meta name="author" content="SitePoint" />
+  </head>
+  <style>
+    body {
+      background-color: rgb(22, 20, 20);
+    }
+    .bg-img-wrapper {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background-image: url(pandemic-img.jpeg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .radio-wrapper {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      position: relative;
+      z-index: 200;
+      bottom: 2px;
+    }
+  </style>
+  <body>
+    <div class="bg-img-wrapper"></div>
+    <!-- <img src="./pandemic-img.jpeg" alt="Pandemic Radio" /> -->
+    <div class="radio-wrapper">
+      <script src="https://embed.radio.co/player/2a3a3b8.js"></script>
+    </div>
+  </body>
+</html>
