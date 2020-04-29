@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pandemic Radio</title>
+	<meta name="description" content="Pandemic Radio" />
+	<meta name="author" content="SitePoint" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<style>
+	body {
+		background-color: rgb(22, 20, 20);
+		margin: 0;
+		padding: 0;
+	}
+
+	.bg-img-wrapper img {
+		max-width: 100%;
+		max-height: 100%;
+		/* top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: fixed; */
+	}
+
+	.radio-wrapper {
+		display: flex;
+		height: 100vh;
+		align-items: center;
+		position: relative;
+		z-index: 200;
+		bottom: 2px;
+	}
+
+	iframe {
+		/* position: fixed; */
+		/* bottom: 0; */
+		margin-top: 10px !important;
+		max-width: 100% !important;
+	}
+
+	@media only screen and (min-width: 768px) {
+		body {
+			background-color: rgb(22, 20, 20);
+			background-image: none;
+		}
+
+		iframe, .bg-img-wrapper img {
+			position: fixed;
+			max-width: 100%;
+			max-height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		/* .bg-img-wrapper img {
+			max-width: 100%;
+			max-height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: fixed;
+	} */
+	}
+</style>
+
+<body>
+	<div class="bg-img-wrapper">
+		<img src="./pandemic-img.jpeg" alt="Pandemic Radio" />
+	</div>
+	<div id="radio"></div>
+	<script>
+		var radioScript = document.createElement("script");
+
+		if (screen && screen.width < 768) {
+			radioScript.src = 'https://embed.radio.co/player/5cc0bb4.js';
+		}
+		else radioScript.src = 'https://embed.radio.co/player/ea8a289.js';
+		document.getElementById('radio').appendChild(radioScript);
+	</script>
+</body>
+
+</html>
